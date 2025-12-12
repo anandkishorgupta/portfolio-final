@@ -1,0 +1,139 @@
+.about-paragraph {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.8rem;
+  border-radius: 1rem;
+  line-height: 1.75;
+  color: #1f2937;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+
+/* --------------------------------------------------------
+   Hover: Paragraph Whole Box
+--------------------------------------------------------- */
+.paragraph-hover:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* --------------------------------------------------------
+   Hover: Inside Text Moves Slightly
+--------------------------------------------------------- */
+.paragraph-content-hover * {
+  transition: all 0.35s ease;
+}
+
+.paragraph-content-hover:hover * {
+  transform: translateY(-4px);
+  letter-spacing: 0.4px;
+  color: #111; /* slightly darker */
+}
+
+/* --------------------------------------------------------
+   Achievement Card Style
+--------------------------------------------------------- */
+.achievement-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: 0.3s ease;
+}
+.achievement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* --------------------------------------------------------
+   Fade-In Animation
+--------------------------------------------------------- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+ /* --------------------------------------------------------
+   Paragraph Box Style
+--------------------------------------------------------- */
+.about-paragraph {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.8rem;
+  border-radius: 1rem;
+  line-height: 1.75;
+  color: #1f2937;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+
+/* --------------------------------------------------------
+   Hover: Paragraph Whole Box
+--------------------------------------------------------- */
+.paragraph-hover:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* --------------------------------------------------------
+   Hover: Inside Text Moves Slightly
+--------------------------------------------------------- */
+.paragraph-content-hover * {
+  transition: all 0.35s ease;
+}
+
+.paragraph-content-hover:hover * {
+  transform: translateY(-4px);
+  letter-spacing: 0.4px;
+  color: #111; /* slightly darker */
+}
+
+/* --------------------------------------------------------
+   Achievement Card Style
+--------------------------------------------------------- */
+.achievement-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: 0.3s ease;
+}
+.achievement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* --------------------------------------------------------
+   Fade-In Animation
+--------------------------------------------------------- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }

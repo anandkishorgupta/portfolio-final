@@ -1,0 +1,244 @@
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.logo-text {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}  */
+
+/* Letter animation */
+/* .logo-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* Navbar shadow and backdrop blur */
+/* .navbar {
+  backdrop-filter: blur(10px);
+  background: linear-gradient(90deg, #FFD700 0%, #FFEA00 100%);
+  transition: all 0.5s ease;
+} */
+
+/* Navbar links */
+/* .navbar ul li a {
+  position: relative;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #111; 
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: #111;
+  transition: width 0.3s;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+} */
+
+/* Mobile menu */
+/* .mobile-menu {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: inset 0 -5px 10px rgba(0,0,0,0.1);
+} */
+
+/* Hamburger icon animation */
+/* .hamburger-icon {
+  transition: transform 0.5s ease;
+}
+
+.hamburger-icon.open {
+  transform: rotate(90deg);
+} */
+
+
+
+/* Modern Luxury Logo Font */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.logo-text {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.06em;
+  color: #1a1a1a;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Logo letter animation */
+.logo-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.5s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navigation link underline */
+.navbar-link {
+  position: relative;
+  transition: color 0.25s;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: #111;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar-link:hover {
+  color: #111;
+}
+
+/* Mobile menu modern look */
+.mobile-menu {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 248, 214, 0.95),
+    rgba(255, 226, 145, 0.95),
+    rgba(247, 201, 72, 0.95)
+  );
+  backdrop-filter: blur(12px);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.1);
+}
+
+
+/*  */
+
+
+/* Logo letter animations */
+.logo-letter {
+  animation: fadeInUp 0.5s ease-out both;
+  transform-origin: center;
+}
+
+.logo-letter:hover {
+  color: #b45309; /* Amber-700 */
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+.logo-letter-inactive {
+  animation: subtlePulse 2s ease-in-out infinite;
+  color: #fbbf24; /* Amber-400 */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.02);
+  }
+}
+
+/* Name switch animation */
+@keyframes nameSwitch {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  51% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name-switch-enter {
+  animation: nameSwitch 0.8s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  
+  .logo-letter {
+    animation-delay: calc(var(--index) * 0.03s) !important;
+  }
+}
+
+/* Enhanced hover effects */
+.name-container:hover .logo-letter {
+  animation-play-state: paused;
+}
+
+/* Gradient text effect on scroll */
+.scrolled .logo-text {
+  background: linear-gradient(45deg, #92400e, #d97706, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* ----------------------------------------------------------- */
+/* Navbar Animations */
