@@ -529,7 +529,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="w-full min-h-screen flex flex-col-reverse md:flex-row items-center px-6 md:px-24 pt-32 pb-10 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="w-full min-h-screen flex flex-col-reverse md:flex-row items-center px-6 md:px-24 pt-32 pb-10 bg-gradient-to-br from-[#FFF9DE]/70 via-[#FFEFAF]/50 to-[#F7D96E]/60 ">
       {/* Left Text Section */}
       <motion.div
         className="flex-1 flex flex-col justify-center space-y-6 md:space-y-8 text-gray-900 text-center md:text-left"
