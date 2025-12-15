@@ -487,9 +487,7 @@
 // };
 
 // export default HeroSection;
-
-
-
+// ----------------------------------------------------------------------------------------
 
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
@@ -582,8 +580,10 @@ const HeroSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
               >
-                <span className="text-amber-500 mr-3 mt-1">•</span>
-                {role}
+                <span className="text-amber-500 mr-3 flex items-center h-full">
+                  •
+                </span>
+                <span className="flex items-center">{role}</span>
               </motion.li>
             ))}
           </ul>

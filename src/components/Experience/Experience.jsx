@@ -23,7 +23,7 @@ const experiences = [
     company: "Niko Energy Limited",
     period: "Current",
     description: "Guiding energy projects and corporate strategy.",
-    link: "https://nikoenergyltd.com/",
+    link: "https://nikoenergyltd.com/team/nara-prasad-sitaula-narayan/",
   },
   {
     role: "Managing Director",
@@ -60,7 +60,7 @@ const ExperienceTimeline = () => {
   // // SEO
   useEffect(() => {
     updatePageSEO({
-      title: "Professional Experience",
+      title: "Nara Prasad Sitaula",
       description:
         "Explore the extensive 22+ year career of Nara Prasad Sitaula across LIC Nepal, Devshree Ventures, hydropower projects, and multiple directorships in Nepal business sector.",
       keywords:
