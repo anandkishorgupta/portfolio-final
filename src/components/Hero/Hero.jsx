@@ -489,12 +489,155 @@
 // export default HeroSection;
 // ----------------------------------------------------------------------------------------
 
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
+// import { motion } from "framer-motion";
+// import heroImage from "../../assets/hero.jpg";
+// import updatePageSEO from "../utils/seo";
+
+// const HeroSection = () => {
+//   useEffect(() => {
+//     updatePageSEO({
+//       title: "Chairman & Business Leader - Nara Prasad Sitaula",
+//       description:
+//         "Official website of Nara Prasad Sitaula, Chairman of Devshree Ventures.",
+//       image: "/hero-og.jpg",
+//       keywords: "Chairman Nepal, Devshree Ventures, Business Leader",
+//       canonical: "https://naraprasadsitaula.com/",
+//     });
+//   }, []);
+
+//   const roles = [
+//     "Chairman of Devshree Ventures Pvt Ltd",
+//     "Chairman of Devshree Multipurpose Cooperative",
+//     "Director of Niko Energy Limited",
+//     "Managing Director of Waling Khurkhola Hydropower Ltd",
+//     "Former Director of Kohinoor Wires and Steel",
+//   ];
+
+//   // Simple fade up animation for text
+//   const fadeUpVariants = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: { opacity: 1, y: 0 },
+//   };
+
+//   // Simple fade in for image
+//   const fadeInVariants = {
+//     hidden: { opacity: 0, scale: 0.95 },
+//     visible: { opacity: 1, scale: 1 },
+//   };
+
+//   return (
+//     <section className="w-full min-h-screen flex flex-col-reverse md:flex-row items-center px-6 md:px-24 pt-32 pb-10 bg-gradient-to-br from-[#FFF9DE]/70 via-[#FFEFAF]/50 to-[#F7D96E]/60 ">
+//       {/* Left Text Section */}
+//       <motion.div
+//         className="flex-1 flex flex-col justify-center space-y-6 md:space-y-8 text-gray-900 text-center md:text-left"
+//         initial={{ opacity: 0 }}
+//         animate={{ opacity: 1 }}
+//         transition={{ duration: 0.6 }}
+//       >
+//         <div className="space-y-4">
+//           <motion.div
+//             className="space-y-2"
+//             variants={fadeUpVariants}
+//             initial="hidden"
+//             animate="visible"
+//             transition={{ duration: 0.5 }}
+//           >
+//             <span className="text-xl text-gray-600">I'm</span>
+//             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+//               Nara Prasad Sitaula
+//             </h1>
+//           </motion.div>
+
+//           <motion.div
+//             className="flex items-center justify-center md:justify-start gap-2 text-lg"
+//             variants={fadeUpVariants}
+//             initial="hidden"
+//             animate="visible"
+//             transition={{ duration: 0.5, delay: 0.1 }}
+//           >
+//             <span className="text-gray-600">also known as</span>
+//             <span className="text-amber-700 font-medium px-3 py-1 bg-amber-50 rounded-lg">
+//               Narayan Sitaula
+//             </span>
+//           </motion.div>
+//         </div>
+
+//         {/* Role List */}
+//         <motion.div
+//           className="mt-8 space-y-4"
+//           variants={fadeUpVariants}
+//           initial="hidden"
+//           animate="visible"
+//           transition={{ duration: 0.5, delay: 0.2 }}
+//         >
+//           <ul className="space-y-3">
+//             {roles.map((role, index) => (
+//               <motion.li
+//                 key={index}
+//                 className="text-lg sm:text-xl text-gray-700 font-light flex items-start"
+//                 initial={{ opacity: 0, x: -20 }}
+//                 animate={{ opacity: 1, x: 0 }}
+//                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+//               >
+//                 <span className="text-amber-500 mr-3 flex items-center h-full">
+//                   •
+//                 </span>
+//                 <span className="flex items-center text-start">{role}</span>
+//               </motion.li>
+//             ))}
+//           </ul>
+//         </motion.div>
+//       </motion.div>
+
+//       {/* Right Image Section */}
+//       <motion.div
+//         className="flex-1 flex justify-center mb-10 md:mb-0"
+//         variants={fadeInVariants}
+//         initial="hidden"
+//         animate="visible"
+//         transition={{ duration: 0.8, delay: 0.4 }}
+//       >
+//         <div className="relative w-full max-w-sm md:max-w-md">
+//           {/* Subtle shadow */}
+//           <div className="absolute -inset-4 bg-gradient-to-r from-amber-100 to-amber-50 rounded-2xl blur-lg opacity-50" />
+
+//           {/* Image container */}
+//           <div className="relative overflow-hidden rounded-xl shadow-lg">
+//             <motion.img
+//               src={heroImage}
+//               alt="Narayan Sitaula"
+//               className="w-full h-auto rounded-xl"
+//               initial={{ opacity: 0 }}
+//               animate={{ opacity: 1 }}
+//               transition={{ duration: 0.6, delay: 0.6 }}
+//             />
+
+//             {/* Subtle border effect */}
+//             <div className="absolute inset-0 border border-amber-200/30 rounded-xl pointer-events-none" />
+//           </div>
+
+//           {/* Corner accents */}
+//           <div className="absolute -top-2 -left-2 w-4 h-4 border-t border-l border-amber-400 rounded-tl-lg" />
+//           <div className="absolute -top-2 -right-2 w-4 h-4 border-t border-r border-amber-400 rounded-tr-lg" />
+//           <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b border-l border-amber-400 rounded-bl-lg" />
+//           <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b border-r border-amber-400 rounded-br-lg" />
+//         </div>
+//       </motion.div>
+//     </section>
+//   );
+// };
+
+// export default HeroSection;
+
+// optimised code
+import React, { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import heroImage from "../../assets/hero.jpg";
 import updatePageSEO from "../utils/seo";
 
 const HeroSection = () => {
+  // SEO update once
   useEffect(() => {
     updatePageSEO({
       title: "Chairman & Business Leader - Nara Prasad Sitaula",
@@ -506,28 +649,37 @@ const HeroSection = () => {
     });
   }, []);
 
-  const roles = [
-    "Chairman of Devshree Ventures Pvt Ltd",
-    "Chairman of Devshree Multipurpose Cooperative",
-    "Director of Niko Energy Limited",
-    "Managing Director of Waling Khurkhola Hydropower Ltd",
-    "Former Director of Kohinoor Wires and Steel",
-  ];
+  // Memoized roles array
+  const roles = useMemo(
+    () => [
+      "Chairman of Devshree Ventures Pvt Ltd",
+      "Chairman of Devshree Multipurpose Cooperative",
+      "Director of Niko Energy Limited",
+      "Managing Director of Waling Khurkhola Hydropower Ltd",
+      "Former Director of Kohinoor Wires and Steel",
+    ],
+    []
+  );
 
-  // Simple fade up animation for text
-  const fadeUpVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
+  // Memoized motion variants
+  const fadeUpVariants = useMemo(
+    () => ({
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 },
+    }),
+    []
+  );
 
-  // Simple fade in for image
-  const fadeInVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1 },
-  };
+  const fadeInVariants = useMemo(
+    () => ({
+      hidden: { opacity: 0, scale: 0.95 },
+      visible: { opacity: 1, scale: 1 },
+    }),
+    []
+  );
 
   return (
-    <section className="w-full min-h-screen flex flex-col-reverse md:flex-row items-center px-6 md:px-24 pt-32 pb-10 bg-gradient-to-br from-[#FFF9DE]/70 via-[#FFEFAF]/50 to-[#F7D96E]/60 ">
+    <section className="w-full min-h-screen flex flex-col-reverse md:flex-row items-center px-6 md:px-24 pt-32 pb-10 bg-gradient-to-br from-[#FFF9DE]/70 via-[#FFEFAF]/50 to-[#F7D96E]/60">
       {/* Left Text Section */}
       <motion.div
         className="flex-1 flex flex-col justify-center space-y-6 md:space-y-8 text-gray-900 text-center md:text-left"
@@ -563,31 +715,28 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Role List */}
-        <motion.div
+        {/* Role List with staggerChildren */}
+        <motion.ul
           className="mt-8 space-y-4"
-          variants={fadeUpVariants}
           initial="hidden"
           animate="visible"
-          transition={{ duration: 0.5, delay: 0.2 }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } },
+          }}
         >
-          <ul className="space-y-3">
-            {roles.map((role, index) => (
-              <motion.li
-                key={index}
-                className="text-lg sm:text-xl text-gray-700 font-light flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-              >
-                <span className="text-amber-500 mr-3 flex items-center h-full">
-                  •
-                </span>
-                <span className="flex items-center text-start">{role}</span>
-              </motion.li>
-            ))}
-          </ul>
-        </motion.div>
+          {roles.map((role, index) => (
+            <motion.li
+              key={index}
+              className="text-lg sm:text-xl text-gray-700 font-light flex items-start"
+              variants={fadeUpVariants}
+            >
+              <span className="text-amber-500 mr-3 flex items-center h-full">
+                •
+              </span>
+              <span className="flex items-center text-start">{role}</span>
+            </motion.li>
+          ))}
+        </motion.ul>
       </motion.div>
 
       {/* Right Image Section */}
@@ -607,13 +756,12 @@ const HeroSection = () => {
             <motion.img
               src={heroImage}
               alt="Narayan Sitaula"
+              loading="lazy"
               className="w-full h-auto rounded-xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             />
-
-            {/* Subtle border effect */}
             <div className="absolute inset-0 border border-amber-200/30 rounded-xl pointer-events-none" />
           </div>
 
@@ -628,4 +776,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default React.memo(HeroSection);
