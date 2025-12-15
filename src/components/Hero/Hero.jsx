@@ -583,7 +583,7 @@ const HeroSection = () => {
                 <span className="text-amber-500 mr-3 flex items-center h-full">
                   •
                 </span>
-                <span className="flex items-center">{role}</span>
+                <span className="flex items-center text-start">{role}</span>
               </motion.li>
             ))}
           </ul>
